@@ -1,9 +1,9 @@
-import example.pepita
+import personaje.*
 
-describe "group of tests for pepita" {
-
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+describe "Grupo de test para los personajes" {
+  const orco1 = new Orco(fuerza = 10, inteligencia = 2, rol = brujo)
+  
+  test "El orco1 tiene un potencial ofensivo de 110" {
+    assert.equals(110, orco1.potencialOfensivo())
   }
-
 }
