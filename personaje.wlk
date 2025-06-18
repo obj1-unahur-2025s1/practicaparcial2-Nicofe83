@@ -116,7 +116,7 @@ class Ejercito {
   method nuevoEjercitoFuerte(unaCantidad) {
     const nuevoEjercito = personajes.sortBy(
       { p1, p2 => p1.poderOfensivo() > p2.poderOfensivo() }
-    )
+    ).take(unaCantidad)
     personajes.removeAll(nuevoEjercito)
     return new Ejercito(personajes = nuevoEjercito)
   }
